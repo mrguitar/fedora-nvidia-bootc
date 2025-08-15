@@ -1,6 +1,3 @@
 [customizations.installer.kickstart]
 contents = """
-%post --erroronfail
-bootc switch --mutate-in-place --transport registry [Add your image here, e.g. quay.io/mrguitar/rhel-bootc-workstation]
-%end
 """
