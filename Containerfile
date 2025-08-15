@@ -18,7 +18,7 @@ dnf group install -y kde-desktop virtualization && \
     dnf swap -y mesa-vdpau-drivers mesa-vdpau-drivers-freeworld && \
     dnf remove -y --no-autoremove plasma-discover-offline-updates plasma-discover-packagekit && \
     dnf clean all && \
-    systemctl enable lm_sensors sysstat tuned libvirtd.socket && \
+    systemctl enable fstrim.timer podman-auto-update.timer cockpit.socket lm_sensors sysstat tuned libvirtd.socket && \
     systemctl set-default graphical.target && \
 
 rm -rf /var/run*
